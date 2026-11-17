@@ -73,4 +73,244 @@
         .subtitle {
             color: var(--text-secondary);
             font-size: 1.05rem;
-            max-width
+            max-width: 650px;
+        }
+
+        /* Sections */
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: "#";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-box {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .skill-box h3 {
+            font-size: 0.95rem;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            background-color: var(--card-bg);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        /* Projects */
+        .project-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .project-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--badge-bg);
+            color: var(--accent);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent);
+            color: var(--bg-color);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            header { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="status-badge">4th Year Cybersecurity Student • Al-Balqa Applied University</span>
+        <h1>Bayan Alatiat <span class="title-dash">—</span> Cybersecurity &amp; Network Specialist</h1>
+        <p class="subtitle">
+            Passionate about network defense, threat intelligence analysis, data privacy, and developing secure software applications.
+        </p>
+    </header>
+
+    <section>
+        <h2>Technical Skills &amp; Tools</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <h3>Cybersecurity &amp; Networking</h3>
+                <div class="tags">
+                    <span class="tag">Cisco Packet Tracer</span>
+                    <span class="tag">VLANs &amp; Routing</span>
+                    <span class="tag">VeraCrypt</span>
+                    <span class="tag">KeePassXC</span>
+                    <span class="tag">HashMyFiles</span>
+                    <span class="tag">Threat Analysis</span>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <h3>Programming &amp; Web</h3>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">XML</span>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <h3>Development &amp; Design</h3>
+                <div class="tags">
+                    <span class="tag">VS Code</span>
+                    <span class="tag">Android Studio</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Git &amp; GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Projects &amp; Labs</h2>
+        
+        <div class="project-card">
+            <div class="project-title">Smart Attendance &amp; Fingerprinting System</div>
+            <p class="project-desc">
+                Collaborated in a team to design and prototype an offline-capable digital application for tracking and managing contract employees' attendance.
+            </p>
+            <div class="tags">
+                <span class="tag">UI/UX Prototyping</span>
+                <span class="tag">Figma</span>
+                <span class="tag">Mobile Architecture</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">My Digital Closet (DailyOutfitPicker)</div>
+            <p class="project-desc">
+                Developed a native Android mobile application for organizing daily outfits with local data persistence and structured user interfaces.
+            </p>
+            <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">XML</span>
+                <span class="tag">SharedPreferences</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">Enterprise Network &amp; Security Labs</div>
+            <p class="project-desc">
+                Configured multi-switch VLAN topologies and default gateways in Cisco environments, alongside implementing encrypted storage containers and cryptographic hash verification.
+            </p>
+            <div class="tags">
+                <span class="tag">Network Security</span>
+                <span class="tag">Cryptography</span>
+                <span class="tag">Cisco</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contact &amp; Links</h2>
+        <div class="contact-info">
+            <a href="mailto:32309257092@std.bau.edu.jo" class="contact-btn">32309257092@std.bau.edu.jo</a>
+            <a href="https://github.com/m04-1j" target="_blank" class="contact-btn">GitHub Profile</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Bayan Alatiat. Built with HTML &amp; CSS.
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+
