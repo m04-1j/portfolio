@@ -12,30 +12,24 @@
             --text-primary: #e6edf3;
             --text-secondary: #8b949e;
             --accent: #58a6ff;
-            --accent-hover: #79c0ff;
             --badge-bg: rgba(88, 166, 255, 0.12);
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.6;
             padding: 2rem 1rem;
         }
-
         .container {
             max-width: 850px;
             margin: 0 auto;
         }
-
-        /* Hero Section (No Image) */
         header {
             padding: 3rem 2rem;
             background: linear-gradient(145deg, #161b22 0%, #0d1117 100%);
@@ -44,7 +38,6 @@
             margin-bottom: 2rem;
             border-left: 4px solid var(--accent);
         }
-
         .status-badge {
             display: inline-block;
             background-color: var(--badge-bg);
@@ -56,27 +49,21 @@
             margin-bottom: 1rem;
             border: 1px solid rgba(88, 166, 255, 0.3);
         }
-
         h1 {
             font-size: 2rem;
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
         }
-
         .title-dash {
             color: var(--accent);
             font-weight: 400;
         }
-
         .subtitle {
             color: var(--text-secondary);
             font-size: 1.05rem;
             max-width: 650px;
         }
-
-        /* Sections */
         section {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -84,50 +71,34 @@
             padding: 1.8rem;
             margin-bottom: 1.5rem;
         }
-
         h2 {
             font-size: 1.25rem;
             color: var(--text-primary);
             margin-bottom: 1.2rem;
             padding-bottom: 0.6rem;
             border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
-
-        h2::before {
-            content: "#";
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
         }
-
         .skill-box {
             background-color: var(--bg-color);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1rem;
         }
-
         .skill-box h3 {
             font-size: 0.95rem;
             color: var(--accent);
             margin-bottom: 0.6rem;
         }
-
         .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.4rem;
         }
-
         .tag {
             background-color: var(--card-bg);
             color: var(--text-secondary);
@@ -136,46 +107,30 @@
             border-radius: 6px;
             font-size: 0.85rem;
         }
-
-        /* Projects */
         .project-card {
             background-color: var(--bg-color);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1.2rem;
             margin-bottom: 1rem;
-            transition: border-color 0.2s ease;
         }
-
-        .project-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .project-card:hover {
-            border-color: var(--accent);
-        }
-
         .project-title {
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.4rem;
         }
-
         .project-desc {
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 0.8rem;
         }
-
-        /* Contact */
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             align-items: center;
         }
-
         .contact-btn {
             display: inline-block;
             background-color: var(--badge-bg);
@@ -186,24 +141,12 @@
             border: 1px solid rgba(88, 166, 255, 0.3);
             font-weight: 500;
             font-size: 0.95rem;
-            transition: all 0.2s ease;
         }
-
-        .contact-btn:hover {
-            background-color: var(--accent);
-            color: var(--bg-color);
-        }
-
         footer {
             text-align: center;
             color: var(--text-secondary);
             font-size: 0.85rem;
             margin-top: 2rem;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 1.5rem; }
-            header { padding: 2rem 1.5rem; }
         }
     </style>
 </head>
@@ -232,7 +175,6 @@
                     <span class="tag">Threat Analysis</span>
                 </div>
             </div>
-
             <div class="skill-box">
                 <h3>Programming &amp; Web</h3>
                 <div class="tags">
@@ -243,7 +185,6 @@
                     <span class="tag">XML</span>
                 </div>
             </div>
-
             <div class="skill-box">
                 <h3>Development &amp; Design</h3>
                 <div class="tags">
@@ -258,7 +199,6 @@
 
     <section>
         <h2>Featured Projects &amp; Labs</h2>
-        
         <div class="project-card">
             <div class="project-title">Smart Attendance &amp; Fingerprinting System</div>
             <p class="project-desc">
@@ -270,7 +210,6 @@
                 <span class="tag">Mobile Architecture</span>
             </div>
         </div>
-
         <div class="project-card">
             <div class="project-title">My Digital Closet (DailyOutfitPicker)</div>
             <p class="project-desc">
@@ -282,7 +221,6 @@
                 <span class="tag">SharedPreferences</span>
             </div>
         </div>
-
         <div class="project-card">
             <div class="project-title">Enterprise Network &amp; Security Labs</div>
             <p class="project-desc">
@@ -311,6 +249,3 @@
 
 </body>
 </html>
-
-
-
